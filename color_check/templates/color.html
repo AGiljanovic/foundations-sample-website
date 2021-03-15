@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if color_hex_code == None %}
+        <p class="color_result error_result"> The color <i>{{user_submitted_string}}</i> Doesn’t seem to exist :/</p>
+    {% else%}
+        <div class="color" style="background-color: {{color_hex_code}}">
+            This is &nbsp; <i> {{ user_submitted_string }}</i>
+        </div>
+{% endif%}
+
+{% endblock %}

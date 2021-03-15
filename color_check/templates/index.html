@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p> Hello there, user. <br>
+        On this website you can enter a color of your choice, and a square showing the said colour will appear!
+
+    <!-- when the user submits this form, it will send the information submitted from the client (frontend)
+    to the server (backend). It will send that infromation to a particular URI, at "/color". 
+    Your server will then run the code which is defined in website.py at that route. -->
+
+    <form action="/color" method="post">
+        <!-- add the contents of your form here -->
+        <label for="name"> Enter a color: </label>
+        <input type="text" name="color" id="color" required>
+    </form>
+
+    </p>
+
+{% endblock %}
