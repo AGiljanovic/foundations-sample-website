@@ -1,6 +1,13 @@
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 2rem;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .banner {
