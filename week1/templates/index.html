@@ -8,15 +8,21 @@ It does not use the power of Flask, but is easier to read than some of the other
 <!-- learn more about what belongs in head and how it is used here 
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML -->
 <head>
-	<title>A Static Page</title>
+    <title>A Static Page</title> 
+    <br>
+    <h1 class="banner">Hello, welcome to a page about</h1>
+    <h1 class="banner">C<>DE UNIVERSITY</h1>
+    <link rel="stylesheet" href="../static/styles.css"><br>
+    
 	<meta charset="utf-8"/>
-    <link rel="stylesheet" href="../static/styles.css">
 </head> 
 <body>
-    <h1 class="banner">Hello, Static HTML!</h1>
-    <p>This page is static HTML, or hard-coded. It is similar to what we did in class the first week on glitch. </p>
-    <p>So far, we are not using the power of Flask, but you will in this assignment!</p>
 
-    <p> To see a page which starts to use Flask to <em>generate</em> dynamic code, <a href="/first-page">click here</a>.</p>
+    <p>This is a page about CODE University, however, if you want to actually learn about it,
+        I recommend that you just look up the actual website unless you love to real lorem ipsum. </p>
+    <p>Here's the link if you actually want to learn something useful: </p><br>
+    <a href="https://code.berlin/en/">click here to see CODE's website</a><br><br>
+    <th><a href="/second-page"> Education </a></th>
+    <th><a href="/first-page">About</a></th>
 </body>
 </html>

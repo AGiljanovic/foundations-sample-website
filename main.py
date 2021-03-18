@@ -1,1 +1,1 @@
-from covid_app.website import app 
+from week1.website import app 
