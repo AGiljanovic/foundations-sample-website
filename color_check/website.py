@@ -25,11 +25,11 @@ def show_color():
     user_submitted_string = request.form['color']
     color_hex_code = get_color_code(user_submitted_string)
     if request.method == 'POST':
-        logging.basicConfig(format = '%(asctime)s %(message)s',
-                            datefmt = '%m/%d/%Y %I:%M:%S %p',
-                            filename = 'tmp/logs.log',
-                            level=logging.DEBUG)
-        logging.info(f'Info: user entry {user_submitted_string}')
+        # logging.basicConfig(format = '%(asctime)s %(message)s',
+        #                     datefmt = '%m/%d/%Y %I:%M:%S %p',
+        #                     filename = 'tmp/logs.log',
+        #                     level=logging.DEBUG)
+        # logging.info(f'Info: user entry {user_submitted_string}')
 
         return render_template("color.html", page_title="Show Color",
                                color_hex_code=color_hex_code,
