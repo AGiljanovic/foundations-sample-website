@@ -6,7 +6,6 @@
 # for example by logging the request and error, and the user,
 # letting them know that their color doesn't exist.
 import json, os
-import logging
 
 
 def get_color_code(color_name):
@@ -14,12 +13,6 @@ def get_color_code(color_name):
     # Open the file at data/css-color-names.json, and return the hex code
     # The file can be considered as JSON format, or as a Python dictionary.
     with open(os.path.dirname(__file__) + '/../data/css-color-names.json') as colors_list:
-        
-        logging.basicConfig(handlers=[logging.FileHandler(os.path.dirname(__file__) + '/../tmp/log.log', 'w', 'utf-8')])
-        logging.debug('This is a debug message')
-        logging.info('Info:')
-        logging.warning('Warnings:')
-        logging.error('Errors:')
 
         colors = json.load(colors_list)
         try:
