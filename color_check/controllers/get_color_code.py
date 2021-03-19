@@ -18,7 +18,7 @@ def get_color_code(color_name):
     # The file can be considered as JSON format, or as a Python dictionary.
     with open(os.path.dirname
               (__file__) + '/../data/css-color-names.json') as colors_list:
-              
+
         logging.debug('This is a debug message')
         logging.info('Info:')
         logging.warning('Warnings:')
@@ -28,7 +28,7 @@ def get_color_code(color_name):
         try:
             color_code = colors.get(color_name)
         except:
-            color_code = f"The color '{color_name}' Doesn’t seem to exist :/"
+            color_code = f"The color '{color_name}' Doesn’t seem to exist :c"
 
         return color_code
 
