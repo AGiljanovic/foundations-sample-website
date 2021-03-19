@@ -1,1 +1,1 @@
-from color_check.website import app
+from covid_app.website import app
