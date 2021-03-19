@@ -5,7 +5,8 @@
 # raise and handle an error that helps both you as a developer,
 # for example by logging the request and error, and the user,
 # letting them know that their color doesn't exist.
-import json, os
+import json
+import os
 
 
 def get_color_code(color_name):

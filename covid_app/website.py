@@ -20,7 +20,7 @@ app = Flask(__name__)
 # quickly if you follow this approach.
 
 # local file for testing purposes
-app.config['DATABASE_FILE'] = 'data/covid_app.sqlite'
+app.config['DATABASE_FILE'] = 'covid_app/data/covid_app.sqlite'
 
 # hack to run with sqlite on app engine: if the code is run on app engine,
 # this will copy the existing database to a writeable tmp directory.
@@ -49,13 +49,11 @@ def create_meeting():
         location = request.form.get('location')
         duration = request.form.get('duration')
         contact = request.form.get('contact')
-        # app.logger.info(name)
+        #app.logger.info(name)
         # turn this into an SQL command. For example:
         # "Adam" --> "INSERT INTO Meetings (name) VALUES("Adam");"
-        sql_insert = "INSERT INTO Meetings (name, date, location, contact, duration) VALUES \
-            (\"{name}\",\"{dates}\",\"{location}\",\"{contact}\",\"{duration}\");"\
-            .format(name=name, dates=dates, location=location,
-                    contact=contact, duration=duration)
+        sql_insert = "INSERT INTO Meetings (name, date, location, contact, duration) VALUES (\"{name}\",\"{dates}\",\"{location}\",\"{contact}\",\"{duration}\");".format(
+            name=name, dates=dates, location=location, contact=contact, duration=duration)
 
         # connect to the database with the filename configured above
         # returning a 2-tuple that contains a connection and cursor object
@@ -80,6 +78,7 @@ def create_meeting():
         # The status code 201 means "created": a row was added to the database
         return render_template('index.html', page_title="Covid Diary",
                                meetings=query_response), 201
+
     except Exception as failure_explanation:
         # something bad happended. Return an error page and a 500 error
         print(failure_explanation)

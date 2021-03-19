@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 from color_check.controllers.get_color_code import get_color_code
-import logging 
+#import logging 
 app = Flask(__name__)
-
 
 
 @app.route('/')
