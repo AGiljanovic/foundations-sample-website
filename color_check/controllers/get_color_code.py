@@ -15,7 +15,7 @@ def get_color_code(color_name):
     # The file can be considered as JSON format, or as a Python dictionary.
     with open(os.path.dirname(__file__) + '/../data/css-color-names.json') as colors_list:
         
-        logging.basicConfig(handlers=[logging.FileHandler(os.path.dirname(__file__) + '/../data/log.txt', 'w', 'utf-8')])
+        logging.basicConfig(handlers=[logging.FileHandler(os.path.dirname(__file__) + '/../tmp/log.log', 'w', 'utf-8')])
         logging.debug('This is a debug message')
         logging.info('Info:')
         logging.warning('Warnings:')
