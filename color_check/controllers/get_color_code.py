@@ -19,10 +19,10 @@ def get_color_code(color_name):
     with open(os.path.dirname
               (__file__) + '/../data/css-color-names.json') as colors_list:
 
-        logging.debug('This is a debug message')
-        logging.info('Info:')
-        logging.warning('Warnings:')
-        logging.error('Errors:')
+        # logging.debug('This is a debug message')
+        # logging.info('Info:')
+        # logging.warning('Warnings:')
+        # logging.error('Errors:')
 
         colors = json.load(colors_list)
         try:

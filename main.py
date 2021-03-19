@@ -1,1 +1,1 @@
-from sample_website.website import app
+from color_check.website import app
