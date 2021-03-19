@@ -28,7 +28,7 @@ def get_color_code(color_name):
         try:
             color_code = colors.get(color_name)
         except:
-            color_code = f"The color '{color_name}' Doesn’t seem to exist :c"
+            color_code = f"The color '{color_name}' Doesn’t seem to exist :/"
 
         return color_code
 
