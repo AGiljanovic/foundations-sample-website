@@ -49,7 +49,7 @@ def create_meeting():
         location = request.form.get('location')
         duration = request.form.get('duration')
         contact = request.form.get('contact')
-        #app.logger.info(name)
+        # app.logger.info(name)
         # turn this into an SQL command. For example:
         # "Adam" --> "INSERT INTO Meetings (name) VALUES("Adam");"
         sql_insert = "INSERT INTO Meetings (name, date, location, contact, duration) VALUES \
